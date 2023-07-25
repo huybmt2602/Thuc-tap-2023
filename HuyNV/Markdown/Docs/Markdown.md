@@ -140,4 +140,4 @@ Bạn có thể sử dụng cú pháp sau để tạo bảng:
 | Hàng 3 | 3x1 | 3x2 | 3x3 | 3x4 |
 | Hàng 4 | 4x1 | 4x2 |4x3 | 4x4|
 
-_Tài liệu tham khảo_: (https://github.com/hocchudong/git-github-for-sysadmin)
+_Tài liệu tham khảo_: [github](https://github.com/hocchudong/git-github-for-sysadmin)
