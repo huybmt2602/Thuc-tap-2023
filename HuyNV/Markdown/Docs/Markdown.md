@@ -48,8 +48,7 @@ cách khác:
 ```
 
 Kết quả: 
-
-![ảnh mèo](/HuyNV/Markdown/Docs/meme%20mèo.jpg)
+![cnv](../Images/meme%20mèo.jpg)
 
 Tôi thường sử dụng công cụ [Lightshot](https://app.prntscr.com/en/index.html) để chụp ảnh màn hình và up hình đó lên trang http://i.imgur.com/ để lấy đường dẫn ảnh đưa vào Github
 
@@ -140,4 +139,4 @@ Bạn có thể sử dụng cú pháp sau để tạo bảng:
 | Hàng 3 | 3x1 | 3x2 | 3x3 | 3x4 |
 | Hàng 4 | 4x1 | 4x2 |4x3 | 4x4|
 
-_Tài liệu tham khảo_: [github](https://github.com/hocchudong/git-github-for-sysadmin)
+_Tài liệu tham khảo_: *[github](https://github.com/hocchudong/git-github-for-sysadmin)*
