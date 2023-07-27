@@ -11,7 +11,7 @@ Mô hình OSI đóng vai trò quan trọng trong lĩnh vực mạng máy tính v
 ![mô hình OSI](../Images/image.png)
 
 Vậy cụ thể mô hình OSI được chia ra thành mấy tầng? Mô hình này gồm có 7 lớp để giải quyết vấn đề trên:
-![7lop](../Images/7lopOSI.png)
+![Mô hình 7 lớp OSI](../Images/Mohinh7lop.png)
 
 1. Application
 2. Presentation
