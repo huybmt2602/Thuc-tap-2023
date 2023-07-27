@@ -8,20 +8,19 @@ Markdown sử dụng kí tự # để bắt đầu cho các thẻ tiêu đề, c
 
 Tùy mục đích và ý thích bạn có thể sử dụng cách này để thể hiện các chỉ mục khác nhau.
 
-Ví dụ:
-
+- Ví dụ:
 ```
-# 1. Tiêu đề cấp 1
+# Tiêu đề cấp 1
 ```
-# 1. Tiêu đề cấp 1
+# Tiêu đề cấp 1
 ```
-## 2. Tiêu đề cấp 2
+## Tiêu đề cấp 2
 ```
-## 2. Tiêu đề cấp 2
+## Tiêu đề cấp 2
 ```
-###### 6. Tiêu đề cấp 6
+###### Tiêu đề cấp 6
 ```
-###### 6. Tiêu đề cấp 6
+###### Tiêu đề cấp 6
 
 ### 2. Chèn link chèn ảnh
 Để chèn hyperlink bạn chỉ cần paste luôn linh đó vào file .md
