@@ -8,7 +8,7 @@ Mô hình OSI đóng vai trò quan trọng trong lĩnh vực mạng máy tính v
 
 Đây là một khung mô hình chuẩn được sử dụng trong lĩnh vực mạng máy tính. Mô hình được đề xuất bởi [Tổ chức Tiêu chuẩn Hóa Quốc tế (ISO)](https://vi.wikipedia.org/wiki/T%E1%BB%95_ch%E1%BB%A9c_ti%C3%AAu_chu%E1%BA%A9n_h%C3%B3a_qu%E1%BB%91c_t%E1%BA%BF) vào những năm 1980.
 
-![OSI](image.png)
+![mô hình OSI](../Images/image.png)
 
 Vậy cụ thể mô hình OSI được chia ra thành mấy tầng? Mô hình này gồm có 7 lớp để giải quyết vấn đề trên:
 ![7lop](../Images/7lopOSI.png)
