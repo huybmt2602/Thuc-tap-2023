@@ -201,7 +201,7 @@ __Bước 6__: Lớp Presentation sẽ xử lý gói tin bằng cách chuyển �
 
 __Bước 7__: Lớp Application tiến hành xử lý và gỡ bỏ Header cuối cùng. Khi đó ở máy nhận B sẽ nhận được dữ liệu của gói tin được truyền đi.
 
-_Tài liệu tham khảo_:
+### _Tài liệu tham khảo_:
 _[mikotech.vn](https://mikotech.vn/mo-hinh-osi-la-gi/)_
 _[totolink.vn](https://www.totolink.vn/article/136-mo-hinh-osi-la-gi-chuc-nang-cua-cac-tang-giao-thuc-trong-mo-hinh-osi.html)_
 _[hainguyenit.edubit.vn](https://hainguyenit.edubit.vn/blog/mo-hinh-osi-de-hieu-cho-nguoi-moi-hoc-mang)_
