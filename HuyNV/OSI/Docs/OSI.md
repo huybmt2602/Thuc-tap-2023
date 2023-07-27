@@ -1,4 +1,4 @@
-# Mô Hình OSI Là Gì? Nhiệm vụ và chức năng của 7 tầng OSI
+# Mô Hình OSI Là Gì? Nhiệm vụ và chức năng của 7 lớp trong mô hình OSI
 
 Mô hình OSI đóng vai trò quan trọng trong lĩnh vực mạng máy tính và được dùng để mô tả các giao thức và chức năng trong một mạng máy tính. Trong bài viết này, chúng ta của cùng tìm hiểu [mô hình osi là gì](https://mikotech.vn/mo-hinh-osi-la-gi/), cấu trúc ra sao và có chức năng ra sao.
 

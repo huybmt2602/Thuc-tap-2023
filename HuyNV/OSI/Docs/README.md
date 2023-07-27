@@ -1,4 +1,4 @@
-# Mô Hình OSI Là Gì? Nhiệm vụ và chức năng của 7 tầng OSI
+# Mô Hình OSI Là Gì? Nhiệm vụ và chức năng của 7 lớp trong mô hình OSI
 
 [1. Mô hình OSI là gì?](https://github.com/huybmt2602/Thuc-tap-2023/blob/main/HuyNV/OSI/Docs/OSI.md#1-m%C3%B4-h%C3%ACnh-osi-l%C3%A0-g%C3%AC)
 
