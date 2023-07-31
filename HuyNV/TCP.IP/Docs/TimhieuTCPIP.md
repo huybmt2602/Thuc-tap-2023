@@ -8,7 +8,7 @@ Mô hình TCP IP tiêu chuẩn gồm có 4 tầng chồng lên nhau theo thứ t
 
 ![Mô hình TCP/IP](../Images/MohinhTCPIP.png)
 
-### 1.1 Cách thức hoạt động của TCP/IP
+### Cách thức hoạt động của TCP/IP
 
 ![Hoạt động TCP/IP](../Images/hdTCPIP.png)
 
