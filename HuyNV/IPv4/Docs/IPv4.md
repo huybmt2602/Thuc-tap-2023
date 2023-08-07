@@ -43,7 +43,7 @@ Các loại địa chỉ IPv4: unicast, broadcast, multicast. Trong đó unicast
 
 ## 2. Tại sao không có địa chỉ IPv1, v2, v3, v5
 
-Vì những phiên bản IPv1, v2, v3 không được công nhận chính thức, không đáp ứng đủ nhu cầu người dùng vì thế được chuyển lên thành địa chỉ IPv4.
+Vì những phiên bản IPv1, v2, v3, v5 không được công nhận chính thức, không được triển khai rộng rãi do nhiều vấn đề kỹ thuật và khả năng của chúng không đáp ứng đủ nhu cầu người dùng. 
 
 ## 3. Cấu trúc và các thành phần của địa chỉ IPv4
 
