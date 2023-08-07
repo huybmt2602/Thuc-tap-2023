@@ -8,7 +8,7 @@ __IPv4 là phiên bản IP thế hệ thứ 4__, nó được sử dụng nhiề
 
 IPv4 là giao thức mang tính hướng dữ liệu và được sử dụng cho hệ thống chuyển mạch gói. IPv4 không quan tâm đến thứ tự truyền gói tin, cũng không đảm bảo gói tin sẽ đến được đích hay là có sảy ra tình trạng lặp gói tin ở đích đến hay không. Nó chỉ có cơ chế đảm bảo tính toàn vẹn dữ liệu bằng việc sử dụng những gói kiểm tra được thiết lập đi kèm với nó. 
 
-Địa chỉ Ipv4 là 1 địa chỉ đơn nhất đang được sử dụng bởi các thiết bị điện tử hiện nay để nhận diện và liên lạc với nhau trên Internet. Để đánh địa chỉ, Ipv4 sử dụng 32bit và chia ra làm 4 octet (mỗi octet có 8 bit = 1 byte). Dấu chấm được sử dụng để ngăn các octet với nhau.
+Địa chỉ IPv4 là 1 địa chỉ đơn nhất đang được sử dụng bởi các thiết bị điện tử hiện nay để nhận diện và liên lạc với nhau trên Internet. Để đánh địa chỉ, Ipv4 sử dụng 32bit và chia ra làm 4 octet (mỗi octet có 8 bit = 1 byte). Dấu chấm được sử dụng để ngăn các octet với nhau.
 
 Để hiểu địa chỉ IPv4 là gì có thể lấy ví dụ như sau 172.16.254.1. Dải số này có thể dùng để đặt tên cho một địa chỉ IPv4 nào đó. Có thể thấy địa chỉ IPv4 có tổng cộng 4 số và mỗi số phải nằm trong giới hạn từ 0-255. 
 
@@ -32,7 +32,7 @@ Các loại địa chỉ IPv4: unicast, broadcast, multicast. Trong đó unicast
 
 - Giao thức không có kết nối.
 - Cho phép tạo một lớp giao tiếp ảo đơn giản trên nhiều thiết bị.
-- Nó chiếm ít bộ nhớ hơn và dễ dàng nghi nhớ các địa chỉ.
+- Nó chiếm ít bộ nhớ hơn và dễ dàng ghi nhớ các địa chỉ.
 - Được hỗ trợ trên nhiều thiết bị.
 
 **Nhược điểm**
@@ -43,7 +43,7 @@ Các loại địa chỉ IPv4: unicast, broadcast, multicast. Trong đó unicast
 
 ## 2. Tại sao không có địa chỉ IPv1, v2, v3, v5
 
-Vì những phiên bản IPv1, v2, v3, v5 không được công nhận chính thức, không được triển khai rộng rãi do nhiều vấn đề kỹ thuật và khả năng của chúng không đáp ứng đủ nhu cầu người dùng. 
+Vì những phiên bản __IPv1, v2, v3, v5__ không được công nhận chính thức, không được triển khai rộng rãi do nhiều vấn đề kỹ thuật và khả năng của chúng không đáp ứng đủ nhu cầu người dùng. 
 
 ## 3. Cấu trúc và các thành phần của địa chỉ IPv4
 
@@ -119,7 +119,7 @@ __Lớp E__
 
 ![Lớp E](../Images/LopE.png)
 
-Bao gồm các địa chỉ có oc-tet đầu tiên từ 240 đến 255 (240.0.0 đến 254.255.255.255). 
+Bao gồm các địa chỉ có oc-tet đầu tiên từ 240 đến 255 (240.0.0.0 đến 254.255.255.255). 
 Lớp E được dành riêng cho công việc nghiên cứu.
 
 ___Lưu ý___:
