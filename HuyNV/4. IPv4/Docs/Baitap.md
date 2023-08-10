@@ -15,7 +15,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 192.168.2.1/29 -> địa chỉ đầu 
 192.168.2.6/29 -> địa chỉ cuối
 192.168.2.7/29 -> địa chỉ broadcast
-255.255.255.248 -> subnet mark
+255.255.255.248 -> subnet mask
 
 ---
 
@@ -23,7 +23,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 192.168.2.9/29 -> địa chỉ đầu 
 192.168.2.14/29 -> địa chỉ cuối
 192.168.2.15/29 -> địa chỉ broadcast
-255.255.255.248 -> subnet mark
+255.255.255.248 -> subnet mask
 
 ---
 
@@ -31,7 +31,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 192.168.2.17/29 -> địa chỉ đầu 
 192.168.2.22/29 -> địa chỉ cuối
 192.168.2.23/29 -> địa chỉ broadcast
-255.255.255.248 -> subnet mark
+255.255.255.248 -> subnet mask
 
 ---
 
@@ -39,7 +39,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 192.168.2.249/29 -> địa chỉ đầu 
 192.168.2.254/29 -> địa chỉ cuối
 192.168.2.255/29 -> địa chỉ broadcast
-255.255.255.248 -> subnet mark
+255.255.255.248 -> subnet mask
 
 >b) 192.168.12.0/24 mượn 3 bit
 
@@ -52,7 +52,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 192.168.12.1/27 -> địa chỉ đầu 
 192.168.12.30/27 -> địa chỉ cuối
 192.168.12.31/27 -> địa chỉ broadcast
-255.255.255.224 -> subnet mark
+255.255.255.224 -> subnet mask
 
 ---
 
@@ -60,7 +60,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 192.168.12.33/27 -> địa chỉ đầu 
 192.168.12.62/27 -> địa chỉ cuối
 192.168.12.63/27 -> địa chỉ broadcast
-255.255.255.224 -> subnet mark
+255.255.255.224 -> subnet mask
 
 ..................................
 
@@ -68,7 +68,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 192.168.12.225/27 -> địa chỉ đầu 
 192.168.12.254/27 -> địa chỉ cuối
 192.168.12.255/27 -> địa chỉ broadcast
-255.255.255.224 -> subnet mark
+255.255.255.224 -> subnet mask
 
 >c) 172.16.2.0/24 mượn 2 bit
 
@@ -81,7 +81,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 172.16.2.1/26 -> địa chỉ đầu
 172.16.2.62/26 -> địa chỉ cuối
 172.16.2.63/26 -> địa chỉ broadcast
-255.255.255.192 -> subnet mark
+255.255.255.192 -> subnet mask
 
 --- 
 
@@ -89,7 +89,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 172.16.2.65/26 -> địa chỉ đầu
 172.16.2.126/26 -> địa chỉ cuối
 172.16.2.127/26 -> địa chỉ broadcast
-255.255.255.192 -> subnet mark
+255.255.255.192 -> subnet mask
 
 ---
 
@@ -97,7 +97,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 172.16.2.129/26 -> địa chỉ đầu
 172.16.2.190/26 -> địa chỉ cuối
 172.16.2.191/26 -> địa chỉ broadcast
-255.255.255.192 -> subnet mark
+255.255.255.192 -> subnet mask
 
 --- 
 
@@ -105,7 +105,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 172.16.2.193/26 -> địa chỉ đầu
 172.16.2.254/26 -> địa chỉ cuối
 172.16.2.255/26 -> địa chỉ broadcast
-255.255.255.192 -> subnet mark
+255.255.255.192 -> subnet mask
 
 >d) 172.16.0.0/16 mượn 3 bit
 
@@ -118,7 +118,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 172.16.0.1/19 -> địa chỉ đầu
 172.16.63.254/19 -> địa chỉ cuối
 172.16.63.255/19 -> địa chỉ broadcast
-255.255.224.0 -> subnet mark
+255.255.224.0 -> subnet mask
 
 ---
 
@@ -126,7 +126,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 172.16.64.1/19 -> địa chỉ đầu
 172.16.127.254/19 -> địa chỉ cuối
 172.16.127.255/19 -> địa chỉ broadcast
-255.255.224.0 -> subnet mark
+255.255.224.0 -> subnet mask
 
 ---
 
@@ -134,7 +134,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 172.16.192.1/19 -> địa chỉ đầu
 172.16.255.254/19 -> địa chỉ cuối
 172.16.255.255/19 -> địa chỉ broadcast
-255.255.224.0 -> subnet mark
+255.255.224.0 -> subnet mask
 
 >e) 172.16.0.0/16 mượn 12 bit 
 
@@ -147,7 +147,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 172.16.0.1/28 -> địa chỉ đầu
 172.16.0.14/28 -> địa chỉ cuối
 172.16.0.15/28 -> địa chỉ broadcast
-255.255.255.240 -> subnet mark
+255.255.255.240 -> subnet mask
 
 --- 
 
@@ -155,7 +155,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 172.16.0.17/28 -> địa chỉ đầu
 172.16.0.30/28 -> địa chỉ cuối
 172.16.0.31/28 -> địa chỉ broadcast
-255.255.255.240 -> subnet mark
+255.255.255.240 -> subnet mask
 
 ---
 
@@ -163,7 +163,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 172.16.0.241/28 -> địa chỉ đầu
 172.16.0.254/28 -> địa chỉ cuối
 172.16.0.255/28 -> địa chỉ broadcast
-255.255.255.240 -> subnet mark
+255.255.255.240 -> subnet mask
 
 --- 
 
@@ -171,7 +171,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 172.16.1.1/28 -> địa chỉ đầu
 172.16.1.14/28 -> địa chỉ cuối
 172.16.1.15/28 -> địa chỉ broadcast
-255.255.255.240 -> subnet mark
+255.255.255.240 -> subnet mask
 
 ---
 
@@ -179,7 +179,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 172.16.1.241/28 -> địa chỉ đầu
 172.16.1.254/28 -> địa chỉ cuối
 172.16.1.255/28 -> địa chỉ broadcast
-255.255.255.240 -> subnet mark
+255.255.255.240 -> subnet mask
 
 ---
 
@@ -187,7 +187,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 172.16.255.241/28 -> địa chỉ đầu
 172.16.255.254/28 -> địa chỉ cuối
 172.16.255.255/28 -> địa chỉ broadcast
-255.255.255.240 -> subnet mark
+255.255.255.240 -> subnet mask
 
 >f) 10.0.0.0/8 mượn 5 bit
 
@@ -200,7 +200,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 10.0.0.1/13 -> địa chỉ đầu
 10.7.255.254/13 -> địa chỉ cuối
 10.7.255.255/13 -> địa chỉ broadcast
-248.0.0.0 subnet mark
+248.0.0.0 subnet mask
 
 ---
 
@@ -208,7 +208,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 10.8.0.1/13 -> địa chỉ đầu
 10.15.255.254/13 -> địa chỉ cuối
 10.15.255.255/13 -> địa chỉ broadcast
-248.0.0.0 subnet mark
+248.0.0.0 subnet mask
 
 ---
 
@@ -216,7 +216,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 10.16.0.1/13 -> địa chỉ đầu
 10.31.255.254/13 -> địa chỉ cuối
 10.31.255.255/13 -> địa chỉ broadcast
-248.0.0.0 subnet mark
+248.0.0.0 subnet mask
 
 ---
 
@@ -224,7 +224,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 10.240.0.1/13 -> địa chỉ đầu
 10.255.255.254/13 -> địa chỉ cuối
 10.255.255.255/13 -> địa chỉ broadcast
-248.0.0.0 subnet mark
+248.0.0.0 subnet mask
 
 >g) 10.0.0.0/8 mượn 10 bit
 
@@ -237,7 +237,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 10.0.0.1/18 -> địa chỉ đầu
 10.0.63.254/18 -> địa chỉ cuối
 10.0.63.255/18 -> địa chỉ broadcast
-255.255.192.0 ->subnet mark
+255.255.192.0 ->subnet mask
 
 ---
 
@@ -245,7 +245,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 10.0.192.1/18 -> địa chỉ đầu
 10.0.255.254/18 -> địa chỉ cuối
 10.0.255.255/18 -> địa chỉ broadcast
-255.255.192.0 ->subnet mark
+255.255.192.0 ->subnet mask
 
 --- 
 
@@ -253,7 +253,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 10.1.0.1/18 -> địa chỉ đầu
 10.1.63.254/18 -> địa chỉ cuối
 10.1.63.255/18 -> địa chỉ broadcast
-255.255.192.0 ->subnet mark
+255.255.192.0 ->subnet mask
 
 ---
 
@@ -261,7 +261,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 10.1.192.1/18 -> địa chỉ đầu
 10.1.255.254/18 -> địa chỉ cuối
 10.1.255.255/18 -> địa chỉ broadcast
-255.255.192.0 ->subnet mark
+255.255.192.0 ->subnet mask
 
 ---
 
@@ -269,7 +269,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 10.255.0.1/18 -> địa chỉ đầu
 10.255.63.254/18 -> địa chỉ đích
 10.255.63.255/18 -> địa chỉ broadcast
-255.255.192.0 -> subnet mark
+255.255.192.0 -> subnet mask
 
 ---
 
@@ -277,7 +277,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 10.255.192.1/18 -> địa chỉ đầu
 10.255.255.254/18 -> địa chỉ đích
 10.255.255.255/18 -> địa chỉ broadcast
-255.255.192.0 -> subnet mark
+255.255.192.0 -> subnet mask
 
 >h) 10.0.0.0/8 mượn 18 bit
 
@@ -290,7 +290,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 10.0.0.1/28 -> địa chỉ đầu
 10.0.0.14/28 -> địa chỉ cuối
 10.0.0.15/28 -> địa chỉ broadcast
-255.255.255.240 -> subnet mark
+255.255.255.240 -> subnet mask
 
 ---
 
@@ -298,7 +298,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 10.0.0.17/28 -> địa chỉ đầu
 10.0.0.30/28 -> địa chỉ cuối
 10.0.0.31/28 -> địa chỉ broadcast
-255.255.255.240 -> subnet mark
+255.255.255.240 -> subnet mask
 
 ---
 
@@ -306,7 +306,7 @@ __Bài 1:__ Cho mạng và số bit mượn. Giả sử hỗ trợ subnet zero. 
 10.255.255.241/28 -> địa chỉ đầu
 10.255.255.254/28 -> địa chỉ cuối
 10.255.255.255/28 -> địa chỉ broadcast
-255.255.255.240 -> subnet mark
+255.255.255.240 -> subnet mask
 
 __Bài 2__: Cho mạng 172.16.5.0/24. Hãy chia nhỏ sao cho phù hợp với sơ đồ sau.
 

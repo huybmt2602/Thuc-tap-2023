@@ -21,7 +21,6 @@ Các loại địa chỉ IPv4: unicast, broadcast, multicast. Trong đó unicast
 - IPv4 là một giao thức 32 bit
 - IPv4 sử dụng phương pháp đánh địa chỉ số
 - Dấu chấm (.) phân tách các bit nhị phân IPv4
-- IPv4 có 12 trường tiêu đề
 - IPv4 có tính năng hỗ trợ phát sóng
 - VLSM (mặt nạ mạng con có độ dài thay đổi) được hỗ trợ bởi IPv4
 - Địa chỉ IPv4 được ánh xạ đến địa chỉ MAC bằng ARP (giao thức phân giải địa chỉ)
@@ -79,7 +78,7 @@ __Lớp A__
 Bit đầu tiên của phần mạng luôn là 0. 
 Lớp A sẽ có địa chỉ mạng từ 1.0.0.0 đến 126.0.0.0 
 Phần host có 24 bit, mạng lớp A có 2^24^-2 host
-Mạng lookback sẽ là 127.0.0.0 
+Mạng loopback sẽ là 127.0.0.0 
 
 **Lớp B**
 
