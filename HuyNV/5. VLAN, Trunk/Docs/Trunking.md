@@ -8,7 +8,7 @@ Các Host cùng một VLAN trên 2 hoặc nhiều Switch muốn đi đến nhau 
 
 ### 2. Các chuẩn trunking trong một hệ thống mạng
 
-Nhìn chung kỷ thuật trunking chèn thêm thông tin vào Ethernet frame. Khi nó đi trên đường trunk để biết frame này đến từ VLAN nào để đẩy frame đến VLAN nhận một cách đúng nhất.
+Nhìn chung kỹ thuật trunking chèn thêm thông tin vào Ethernet frame. Khi nó đi trên đường trunk để biết frame này đến từ VLAN nào để đẩy frame đến VLAN nhận một cách đúng nhất.
 
 #### 2.1 Chuẩn IEEE và kỹ thuật trunking DOT1Q
 
