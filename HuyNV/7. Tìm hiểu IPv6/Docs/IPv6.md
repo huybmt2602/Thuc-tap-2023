@@ -85,7 +85,7 @@ __Địa chỉ Anycast__
 
 ![Alt text](../Images/Anycast.png)
 
-#### Các địa chỉ IPv6 đặc biệt 
+### 4. Các địa chỉ IPv6 đặc biệt 
 
 |  |IPv6 Address|Meaning|
 |------|------|-------|
