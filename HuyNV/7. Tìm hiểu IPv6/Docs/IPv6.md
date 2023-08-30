@@ -1,0 +1,107 @@
+# Tìm hiểu về IPv6
+### 1. IPv6 là gì?
+
+Địa chỉ IPv6 (Internet protocol version 6) là thế hệ địa chỉ Internet phiên bản mới được thiết kế để thay thế cho phiên bản địa chỉ IPv4 trong hoạt động Internet.
+Do sự phát triển như vũ bão của mạng và dịch vụ Internet, nguồn IPv4 dần cạn kiệt, đồng thời bộc lộ các hạn chế đối với việc phát triển các loại hình dịch vụ hiện đại trên Internet. Phiên bản địa chỉ Internet mới IPv6 được thiết kế để thay thế cho phiên bản IPv4, với hai mục đích cơ bản:
+- Thay thế cho nguồn IPv4 cạn kiệt để tiếp nối hoạt động Internet.
+- Khắc phục các nhược điểm trong thiết kế của địa chỉ IPv4.
+
+### 2. Cấu trúc - thành phần của IPv6
+__Biểu diễn địa chỉ IPv6__
+IPv6 sử dụng 128 bit địa chỉ trong khi IPv4 chỉ sử dụng 32 bit; nghĩa là IPv6 có tới 2^128 địa chỉ khác nhau. Đây là một con số rất lớn. Các nhà nghiên cứu chỉ ra rằng chúng ta sẽ không bao giờ sử dụng hết địa chỉ IPv6.
+
+![Alt text](../Images/CautrucIPv6.png)
+
+Địa chỉ IPv6 có chiều dài 128 bít, biểu diễn dưới dạng các cụm số hexa phân cách bởi dấu ::, 
+ví dụ 2001:0DC8::1005:2F43:0BCD:FFFF. Với 128 bít chiều dài, không gian địa chỉ IPv6 gồm 2128 địa chỉ, cung cấp một lượng địa chỉ khổng lồ cho hoạt động Internet.
+Những địa chỉ này lớn, khả năng cung cấp địa chỉ cho nhiều node và cung cấp cấu trúc phân cấp linh hoạt, nhưng nó không dễ để viết ra. Vì vậy cần có 1 số nguyên tắc để nhằm rút ngắn lại cách biểu diễn địa chỉ IPv6. Sau đây là các quy tắc để rút gọn IPv6:
+- Cho phép bỏ các số 0 nằm trước mỗi nhóm (octet).
+- Thay bằng số 0 cho nhóm có toàn số 0.
+- Thay bằng dấu "::" cho các nhóm liên tiếp nhau có toàn số 0.
+
+_Ví dụ về nén địa chỉ IPv6:_ Cho một địa chỉ: 1080:0000:0000:0070:0000:0989:CB45:345F, dựa theo các quy tắc đã nêu trên, có thể nén địa chỉ IP trên như sau: 1080::70:0:989:CB45:345F hoặc 1080:0:0:70::989: CB45:345F
+___Chú ý___: Dấu "::" chỉ sử dụng được 1 lần trong toàn bộ địa chỉ IPv6 (nhiều dấu "::" có thể gây ra sự nhầm lẫn hoặc không thể biết đúng vị trí của các octet trong địa chỉ IPv6).
+__Cấu trúc IPv6 gồm 2 phần:__
+
+![Alt text](../Images/Cautruc.png)
+- __Payload:__ là sự kết hợp của Extension và PDU.Thông thường có thể lên tới 65535 byte.PDU thường bao gồm header của giao thức tầng cao và độ dài của nó, còn Extension là những thông tin liên quan đến dịch vụ kèm theo trong IPv6 được chuyển tới một trường khác và nó có thể có hoặc không.
+  - Uper Layer Protocol Data Unit (PDU): Thường bao gồm header của giao thức tầng cao và độ dài của nó.
+  - Extention Headers:
+    - Những thông tin liên quan đến dịch vụ kèm theo trong IPv6 được chuyển tới một trường khác gọi là header mở rộng Extension Header.
+    - Extension Header là đặc tính mới chỉ có trong IPv6.
+    - Trường Extension Header có thể có hoặc không.
+
+Extension Header là tuỳ chọn. Nó sẽ không được gắn thêm vào nếu các dịch vụ thêm vào không được sử dụng. Nên Extension Header có độ dài không cố định. Trong cấu trúc Header IPv6, có thể thấy 8 bits của trường Next Header. Trường này sẽ xác định xem Extension Header có được sử dụng hay không. Khi Extension Header không được sử dụng, IPv6 Header sẽ chứa mọi thông tin ở Layer 3. Nếu Extension Header được sử dụng, trường Next Header trong Header của 1 gói tin IPv6 sẽ chỉ ra loại của Header tiếp theo sau. Các giá trị của trường Next Header:
+
+|Next header type|Value| |
+|----------|----------|----------|
+|Hop-by-hop Options|00| Được sử dụng khi một trong số các options cần phải được sử lý bởi mỗi node trên đường từ nguồn đến đích. Thông thường chỉ có node đầu cuối xử lý Extension Header|
+|IPv6|41|Để tạo đường hầm IPv6|
+|Routing|43| Cho phép node gửi 1 gói tin đến 1 hoặc nhiều router để các router đó xử lý và định tuyến đến đích|
+|Fragment|44|Được sử dụng khi nguồn gửi gói tin IPv6 gửi đi gói tin lớn hơn Path MTU (Maximum Transmision Unit). Những gói tin này phải được chia tại Layer 3 của node nguồn.|
+|Authentication|51|Sử dụng phương pháp xác thức có độ an toàn cao|
+|Destination Options|60|Giới hạn chỉ những node đích nào mới xử lý những option mà gói tin mang theo|
+|Encapsulating Security Payload|50|ESP Header sử dụng để xác định những thông tin liên quan đến mã hóa dữ liệu được tổ hợp lại thành extension header|
+|No next header|59|Không có header tiếp theo header này| 
+
+- __IPv6 Header:__ là thành phần luôn phải có trong một gói tin IPv6 và cố định 40 bytes
+  
+![Alt text](../Images/IPv6header.png)
+  - Version: 4 bits giúp xác định phiên bản của giao thức.
+  - Traffic class: 8 bits giúp xác định loại lưu lượng.
+  - Flow label: 20 bits giá mỗi luồng dữ liệu.
+  - Payload length: 16 bits (số dương).Giúp xác định kích thước phần tải theo sau IPv6 Header.
+  - Next-Header: 8 bits giúp xác định Header tiếp theo trong gói  tin.
+  - Hop Limit: 8 bits (số dương). Qua mỗi node, giá trị này giảm 1 đơn vị ( giảm đến 0 thì gói bị loại bỏ).
+  - Source address: 128 bits mang địa chỉ IPv6 nguồn của gói tin.
+  
+Tuy Source Address và Destination Address lớn hơn gấp 4 lần số bit so với IPv4 nhưng tổng số bit trong Header không tăng nhiều so với IPv4 do Header trong IPv6 đã được làm đơn giản hơn so với IPv4, nhưng hoạt động hiệu quả.
+### 3. Phân loại IPv6
+
+Một địa chỉ IPv6 có thể được phân thành 1 trong 3 loại:
+
+__Địa chỉ Unicast__
+- __Unicast:__ Một địa chỉ unicast được định nghĩa duy nhất trên một cổng của một node IPv6. Một gói tin được gởi đến một địa chỉ unicast được đưa đến cổng được định nghĩa bởi địa chỉ đó.
+![Alt text](../Images/Diachiunicast.png)
+Địa chỉ unicast gồm có 4 loại khác nhau :
+- Global Unicast Address: tương ứng với địa chỉ public của IPv4, là loại địa chỉ được cho phép truy cập rộng rãi trên mạng internet, hỗ trợ cho việc định tuyến và đánh địa chỉ phân cấp.
+- Link-Local Address: địa chỉ này luôn được cấu hình một cách tự động trên interface của một thiết bị. Địa chỉ này luôn bắt đầu với FE80. 16 bit đầu tiên của địa chỉ liên kết cục bộ luôn được đặt thành 1111 1110 1000 0000 (FE80). 48 bit tiếp theo được đặt thành 0, do đó nó chỉ được sử dụng để liên lạc giữa các máy chủ IPv6 trên một liên kết (phân đoạn quảng bá). Các địa chỉ này không thể định tuyến, do đó, Bộ định tuyến không bao giờ chuyển tiếp các địa chỉ này bên ngoài liên kết.
+- Site-Local Address: tương tự như địa chỉ Private trong IPv4(10.0.0.0/8,172.16.0.0/12 và 192.168.0.0/16), dùng trong nội bộ một Site.
+- Unique-Local Address: được sử dụng trong phạm vi toàn cầu, dùng để thay thế cho địa chỉ site-local.
+
+![Alt text](../Images/Unicast.png)
+
+__Địa chỉ Multicast__
+- __Multicast:__ Một địa chỉ multicast định nghĩa một nhóm các cổng IPv6. Một gói tin gởi đến địa chỉ multicast được xử lý bởi tất cả những thành viên của nhóm multicast.
+  
+![Alt text](../Images/multicast.png)
+
+Địa chỉ multicast cũng có các phạm vi: global, site-local, link-local ngoài ra multicast còn có thêm 2 phạm vi mới đó là organization-local và node-local. Một node IPv6 có thể được gắn rất nhiều địa chỉ.
+- Organization-local: được sử dụng trong phạm vi một tổ chức với một số site.
+- Node-local: chỉ có tính tương ứng trong phạm vi một node
+
+__Địa chỉ Anycast__
+- __Anycast:__ Một địa chỉ anycast được đăng kí cho nhiều cổng (trên nhiều node). Một gói tin được gởi đến một địa chỉ anycast là được chuyển đến chỉ một trong số các cổng này, thường là gần nhất.
+
+![Alt text](../Images/Anycast.png)
+
+#### Các địa chỉ IPv6 đặc biệt 
+
+|  |IPv6 Address|Meaning|
+|------|------|-------|
+|0:0:0:0:0:0:0:0/128|::/128|Địa chỉ không xác định|
+|0:0:0:0:0:0:0:0|::/0|Tuyến đường mặc định|
+|0:0:0:0:0:0:0:1/128|::1/128|Địa chỉ Loopback|
+
+Địa chỉ dành riêng cho giao thức định tuyến:
+|IPv6 Address|Giao thức định tuyến|
+|---------|----------|
+|FF02::5|OSPFv3|
+|FF02::6|OSPFv3 Designated Routers|
+|FF02::9|RIPng|
+|FF02::A|EIGRP|
+
+___Tài liệu tham khảo___
+https://vnpro.vn/tin-tuc/cac-loai-dia-chi-ipv6-dac-biet-va-cau-truc-cua-ipv6-1009.html
+https://www.totolink.vn/article/75-cau-truc-ipv6-va-cac-loai-dia-chi-ipv6.html
+https://viblo.asia/p/tim-hieu-ve-ipv6-3P0lPyDG5ox
