@@ -25,9 +25,8 @@ ___Chú ý___: Dấu "::" chỉ sử dụng được 1 lần trong toàn bộ đ
 
 __Biểu diễn của Address Prefixes__
 
-Prefix của địa chỉ IPv6 được biểu diễn tương tự với kí hiệu IPv4 CIDR. IPv6 prefix được biểu diễn như sau: IPv6-address/ prefix-length
-Trong đó:
-IPv6-address là bất kì địa chỉ có giá trị, Prefix-length là số bit liền kề nhau được bao gồm trong prefix.
+Prefix của địa chỉ IPv6 được biểu diễn tương tự với kí hiệu IPv4 CIDR. IPv6 prefix được biểu diễn như sau: IPv6-address/ prefix-length.
+Trong đó: IPv6-address là bất kì địa chỉ có giá trị, Prefix-length là số bit liền kề nhau được bao gồm trong prefix.
 Ví dụ: Sau đây là quy tắc biểu diễn cho 56 bit prefix 200F00000000AB:
 - 200F::AB00:0:0:0:0/56
 - 200F:0:0:AB00::/56
@@ -39,6 +38,19 @@ Theo sau là các cách biểu diễn sai của 56 bit prefix:
 - 200F::AB/56
 
 Cách biểu diễn đầu tiên là không hợp lệ bởi vì các số 0 theo sau trong vòng một trường 16-bit (AB00) bị mất, và địa chỉ không đủ chiều dài hợp lệ. Địa chỉ IPv6 trên bên trái của dấu gạch chéo “/” phải là một địa chỉ IPv6 có chiều dài đầy đủ hoặc được nén hợp lệ. Cách biểu diễn thứ hai và thứ ba là địa chỉ IPv6 được nén hợp lệ nhưng nó không giãn ra thành địa chỉ chính xác. Thay vì 200F:0000:0000:AB00:0000:0000:0000:0000 nó sẽ giãn thành 200F:0000:0000:0000:0000:0000:0000:AB00 và 200F:0000: 0000:0000:0000:0000:0000:00AB, tương ứng.
+
+__Các thành phần của IPv6__
+
+- __Site prefix:__ Đây là thông số được gán với website thông qua ISP. Do đó, toàn bộ máy tính ở cùng vị trí sẽ chia sẻ với nhau bằng một site prefix. Có thể thấy, đặc tính của site prefix là khi đã nhận ra mạng của người dùng và cho phép truy cập thông qua internet thì nó sẽ hướng đến việc dùng chung.
+- __Subnet ID:__ Đây là thành phần bên trong website. Nó được dùng để miêu tả cấu trúc site của mạng. Vì thế, một IPv6 subnet sẽ có cấu trúc tương đương một nhánh mạng đơn.
+- __Interface ID:__ Cấu trúc của nó tương tự ID trong IPv4. Các thông số sẽ nhận dạng một host riêng. Interface ID có cấu hình tự động.
+
+Ví dụ: Địa chỉ IPv6 có cấu trúc: 2001:0f68:0000:0000:0000:0000:1986:69af bao gồm:
+- Site prefix: 2001:0f68:0000
+- Subnet ID: 0000
+- Interface ID: 0000:0000:1986:69af
+
+![Alt text](../Images/CacthanhphanIPv6.png)
 
 __Cấu trúc IPv6 gồm 2 phần:__
 
