@@ -8,11 +8,12 @@ Do sự phát triển như vũ bão của mạng và dịch vụ Internet, ngu�
 
 ### 2. Cấu trúc - thành phần của IPv6
 __Biểu diễn địa chỉ IPv6__
+
 IPv6 sử dụng 128 bit địa chỉ trong khi IPv4 chỉ sử dụng 32 bit; nghĩa là IPv6 có tới 2^128 địa chỉ khác nhau. Đây là một con số rất lớn. Các nhà nghiên cứu chỉ ra rằng chúng ta sẽ không bao giờ sử dụng hết địa chỉ IPv6.
 
 ![Alt text](../Images/CautrucIPv6.png)
 
-Địa chỉ IPv6 có chiều dài 128 bít, biểu diễn dưới dạng các cụm số hexa phân cách bởi dấu ::, 
+Địa chỉ IPv6 có chiều dài 128 bít, biểu diễn dưới dạng các cụm số hexa phân cách bởi dấu ":", 
 ví dụ 2001:0DC8::1005:2F43:0BCD:FFFF. Với 128 bít chiều dài, không gian địa chỉ IPv6 gồm 2128 địa chỉ, cung cấp một lượng địa chỉ khổng lồ cho hoạt động Internet.
 Những địa chỉ này lớn, khả năng cung cấp địa chỉ cho nhiều node và cung cấp cấu trúc phân cấp linh hoạt, nhưng nó không dễ để viết ra. Vì vậy cần có 1 số nguyên tắc để nhằm rút ngắn lại cách biểu diễn địa chỉ IPv6. Sau đây là các quy tắc để rút gọn IPv6:
 - Cho phép bỏ các số 0 nằm trước mỗi nhóm (octet).
@@ -21,6 +22,21 @@ Những địa chỉ này lớn, khả năng cung cấp địa chỉ cho nhiều
 
 _Ví dụ về nén địa chỉ IPv6:_ Cho một địa chỉ: 1080:0000:0000:0070:0000:0989:CB45:345F, dựa theo các quy tắc đã nêu trên, có thể nén địa chỉ IP trên như sau: 1080::70:0:989:CB45:345F hoặc 1080:0:0:70::989: CB45:345F
 ___Chú ý___: Dấu "::" chỉ sử dụng được 1 lần trong toàn bộ địa chỉ IPv6 (nhiều dấu "::" có thể gây ra sự nhầm lẫn hoặc không thể biết đúng vị trí của các octet trong địa chỉ IPv6).
+
+__Biểu diễn của Address Prefixes__
+
+Prefix của địa chỉ IPv6 được biểu diễn tương tự với kí hiệu IPv4 CIDR. IPv6 prefix được biểu diễn như sau: IPv6-address/ prefix-length
+Trong đó:
+IPv6-address là bất kì địa chỉ có giá trị, Prefix-length là số bit liền kề nhau được bao gồm trong prefix.
+Ví dụ: Sau đây là quy tắc biểu diễn cho 56 bit prefix 200F00000000AB:
+200F::AB00:0:0:0:0/56
+200F:0:0:AB00::/56
+Chú ý với địa chỉ IPv6, kí hiệu “::” được sử dụng 1 lần duy nhất trong mỗi sự biểu diễn.
+Theo sau là các cách biểu diễn sai của 56 bit prefix:
+200F:0:0:AB/56
+200F::AB00/56
+200F::AB/56
+Cách biểu diễn đầu tiên là không hợp lệ bởi vì các số 0 theo sau trong vòng một trường 16-bit (AB00) bị mất, và địa chỉ không đủ chiều dài hợp lệ. Địa chỉ IPv6 trên bên trái của dấu gạch chéo “/” phải là một địa chỉ IPv6 có chiều dài đầy đủ hoặc được nén hợp lệ. Cách biểu diễn thứ hai và thứ ba là địa chỉ IPv6 được nén hợp lệ nhưng nó không giãn ra thành địa chỉ chính xác. Thay vì 200F:0000:0000:AB00:0000:0000:0000:0000 nó sẽ giãn thành 200F:0000:0000:0000:0000:0000:0000:AB00 và 200F:0000: 0000:0000:0000:0000:0000:00AB, tương ứng.
 __Cấu trúc IPv6 gồm 2 phần:__
 
 ![Alt text](../Images/Cautruc.png)
