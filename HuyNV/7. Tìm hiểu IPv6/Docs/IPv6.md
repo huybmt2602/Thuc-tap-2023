@@ -1,7 +1,7 @@
 # Tìm hiểu về IPv6
 ### 1. IPv6 là gì?
 
-Địa chỉ IPv6 (Internet protocol version 6) là thế hệ địa chỉ Internet phiên bản mới được thiết kế để thay thế cho phiên bản địa chỉ IPv4 trong hoạt động Internet.
+Địa chỉ IPv6 (Internet Protocol Version 6) là thế hệ địa chỉ Internet phiên bản mới được thiết kế để thay thế cho phiên bản địa chỉ IPv4 trong hoạt động Internet.
 Do sự phát triển như vũ bão của mạng và dịch vụ Internet, nguồn IPv4 dần cạn kiệt, đồng thời bộc lộ các hạn chế đối với việc phát triển các loại hình dịch vụ hiện đại trên Internet. Phiên bản địa chỉ Internet mới IPv6 được thiết kế để thay thế cho phiên bản IPv4, với hai mục đích cơ bản:
 - Thay thế cho nguồn IPv4 cạn kiệt để tiếp nối hoạt động Internet.
 - Khắc phục các nhược điểm trong thiết kế của địa chỉ IPv4.
