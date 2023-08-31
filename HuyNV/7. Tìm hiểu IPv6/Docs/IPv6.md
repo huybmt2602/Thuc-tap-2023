@@ -29,16 +29,14 @@ Prefix của địa chỉ IPv6 được biểu diễn tương tự với kí hi�
 Trong đó:
 IPv6-address là bất kì địa chỉ có giá trị, Prefix-length là số bit liền kề nhau được bao gồm trong prefix.
 Ví dụ: Sau đây là quy tắc biểu diễn cho 56 bit prefix 200F00000000AB:
-
-200F::AB00:0:0:0:0/56
-200F:0:0:AB00::/56
+- 200F::AB00:0:0:0:0/56
+- 200F:0:0:AB00::/56
 
 Chú ý với địa chỉ IPv6, kí hiệu “::” được sử dụng 1 lần duy nhất trong mỗi sự biểu diễn.
 Theo sau là các cách biểu diễn sai của 56 bit prefix:
-
-200F:0:0:AB/56
-200F::AB00/56
-200F::AB/56
+- 200F:0:0:AB/56
+- 200F::AB00/56
+- 200F::AB/56
 
 Cách biểu diễn đầu tiên là không hợp lệ bởi vì các số 0 theo sau trong vòng một trường 16-bit (AB00) bị mất, và địa chỉ không đủ chiều dài hợp lệ. Địa chỉ IPv6 trên bên trái của dấu gạch chéo “/” phải là một địa chỉ IPv6 có chiều dài đầy đủ hoặc được nén hợp lệ. Cách biểu diễn thứ hai và thứ ba là địa chỉ IPv6 được nén hợp lệ nhưng nó không giãn ra thành địa chỉ chính xác. Thay vì 200F:0000:0000:AB00:0000:0000:0000:0000 nó sẽ giãn thành 200F:0000:0000:0000:0000:0000:0000:AB00 và 200F:0000: 0000:0000:0000:0000:0000:00AB, tương ứng.
 
