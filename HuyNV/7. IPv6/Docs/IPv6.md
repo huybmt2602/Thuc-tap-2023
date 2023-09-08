@@ -41,12 +41,12 @@ Cách biểu diễn đầu tiên là không hợp lệ bởi vì các số 0 the
 
 __Các thành phần của IPv6__
 
-- __Site prefix:__ Đây là thông số được gán với website thông qua ISP. Do đó, toàn bộ máy tính ở cùng vị trí sẽ chia sẻ với nhau bằng một site prefix. Có thể thấy, đặc tính của site prefix là khi đã nhận ra mạng của người dùng và cho phép truy cập thông qua internet thì nó sẽ hướng đến việc dùng chung.
+- __Prefix:__ Đây là thông số được gán với website thông qua ISP. Do đó, toàn bộ máy tính ở cùng vị trí sẽ chia sẻ với nhau bằng một site prefix. Có thể thấy, đặc tính của site prefix là khi đã nhận ra mạng của người dùng và cho phép truy cập thông qua internet thì nó sẽ hướng đến việc dùng chung.
 - __Subnet ID:__ Đây là thành phần bên trong website. Nó được dùng để miêu tả cấu trúc site của mạng. Vì thế, một IPv6 subnet sẽ có cấu trúc tương đương một nhánh mạng đơn.
 - __Interface ID:__ Cấu trúc của nó tương tự ID trong IPv4. Các thông số sẽ nhận dạng một host riêng. Interface ID có cấu hình tự động.
 
 Ví dụ: Địa chỉ IPv6 có cấu trúc: 2001:0f68:0000:0000:0000:0000:1986:69af bao gồm:
-- Site prefix: 2001:0f68:0000
+- Prefix: 2001:0f68:0000
 - Subnet ID: 0000
 - Interface ID: 0000:0000:1986:69af
 
@@ -96,14 +96,22 @@ __Địa chỉ Unicast__
 ![Alt text](../Images/Diachiunicast.png)
 Địa chỉ unicast gồm có 4 loại khác nhau :
 - Global Unicast Address: tương ứng với địa chỉ public của IPv4, là loại địa chỉ được cho phép truy cập rộng rãi trên mạng internet, hỗ trợ cho việc định tuyến và đánh địa chỉ phân cấp.
+  - Dải địa chỉ chính cho việc truyền dữ liệu trên Internet. 
+  - Những địa chỉ có thể định tuyến Internet duy nhất trên tòan cầu.
 - Link-Local Address: địa chỉ này luôn được cấu hình một cách tự động trên interface của một thiết bị. Địa chỉ này luôn bắt đầu với FE80. 16 bit đầu tiên của địa chỉ liên kết cục bộ luôn được đặt thành 1111 1110 1000 0000 (FE80). 48 bit tiếp theo được đặt thành 0, do đó nó chỉ được sử dụng để liên lạc giữa các máy chủ IPv6 trên một liên kết (phân đoạn quảng bá). Các địa chỉ này không thể định tuyến, do đó, Bộ định tuyến không bao giờ chuyển tiếp các địa chỉ này bên ngoài liên kết.
-- Site-Local Address: tương tự như địa chỉ Private trong IPv4(10.0.0.0/8,172.16.0.0/12 và 192.168.0.0/16), dùng trong nội bộ một Site.
+  - Dải địa chỉ Link-Local luôn bắt đầu với tiền tố "fe80::/10".
+  - Các địa chỉ Link-Local tự động tạo ra và được sử dụng cho việc giao tiếp trong mạng cục bộ.
+- IPv4-Compatible IPv6 Address: Đây là loại địa chỉ IPv6 được sử dụng để hỗ trợ việc chuyển đổi từ IPv4 sang IPv6. Địa chỉ này chứa một địa chỉ IPv4 trong địa chỉ IPv6 và có dạng "::IPv4", trong đó IPv4 là địa chỉ IPv4 của thiết bị.
+  - Ví dụ: "::192.0.2.1" biểu diễn địa chỉ IPv6 có địa chỉ IPv4 tương ứng là 192.0.2.1.
 - Unique-Local Address: được sử dụng trong phạm vi toàn cầu, dùng để thay thế cho địa chỉ site-local.
+  - Dải địa chỉ ULA bắt đầu bằng các tiền tố fc00::/7 đến fdff::/7 và có nhiều phân đoạn cho các mục đích cụ thể.
+  - Dải địa chỉ ULA được sử dụng trong mạng cục bộ (local network) và không được định cấu hình tự động bởi tổ chức quản lý phân vùng.
 
 ![Alt text](../Images/Unicast.png)
 
 __Địa chỉ Multicast__
 - __Multicast:__ Một địa chỉ multicast định nghĩa một nhóm các cổng IPv6. Một gói tin gởi đến địa chỉ multicast được xử lý bởi tất cả những thành viên của nhóm multicast.
+- Dải địa chỉ Multicast luôn bắt đầu với tiền tố ff00::/8 tương đương với địa chỉ IPv4 224.0.0.0/4
   
 ![Alt text](../Images/multicast.png)
 
@@ -112,9 +120,10 @@ __Địa chỉ Multicast__
 - Node-local: chỉ có tính tương ứng trong phạm vi một node
 
 __Địa chỉ Anycast__
-- __Anycast:__ Một địa chỉ anycast được đăng kí cho nhiều cổng (trên nhiều node). Một gói tin được gởi đến một địa chỉ anycast là được chuyển đến chỉ một trong số các cổng này, thường là gần nhất.
+- __Anycast:__ Một địa chỉ có thể gắn cho nhiều thiết bị. Một gói tin được gởi đến một địa chỉ anycast là được chuyển đến chỉ một trong số các thiết bị này, thường là gần nhất.
+- Một địa chỉ Anycast sử dụng cùng một dải địa chỉ như địa chỉ Unicast toàn cầu.
 
-![Alt text](../Images/Anycast.png)
+![Alt text](../Images/anycast1.png)
 
 ### 4. Các địa chỉ IPv6 đặc biệt 
 
