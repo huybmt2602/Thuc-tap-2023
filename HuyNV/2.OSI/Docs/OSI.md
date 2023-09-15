@@ -77,7 +77,7 @@ Các giao thức mà lớp Application sử dụng để đáp ứng dịch vụ
 
 Lớp ứng dụng đóng vai trò quan trọng trong việc đáp ứng nhu cầu của người dùng và cho phép họ tương tác với các ứng dụng và dịch vụ mạng. Nó giúp quản lý việc truyền tải dữ liệu, xử lý lỗi và đảm bảo tính toàn vẹn của dữ liệu giữa người dùng và mạng.
 
-![lớp Applycation](/HuyNV/OSI/Images/lop7APP.png)
+![Alt text](../Images/lop7APP.png)
 
 ### 2.2 Lớp trình diễn (Presentation Layer)
 
