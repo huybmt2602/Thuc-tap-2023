@@ -16,14 +16,14 @@ __Ưu điểm__
 - Phù hợp cho việc phát triển web, kiểm tra mạng.
 
 __Nhược điểm__
-- Máy ảo có các tiềm ẩn về vấn đề bảo mật khi truy cập trực tiếp Internet 
+- Máy ảo  có các tiềm ẩn về vấn đề bảo mật khi truy cập trực tiếp Internet 
 - Yêu cầu cấu hình thêm máy chủ vậy lý để hoạt động với mạng Bridge
 
 __Các trường hợp nên sử dụng mạng Bridge__
 - Sử dụng khi bạn cần máy ảo truy cập Internet và các tài nguyên mạng bên ngoài, chẳng hạn như máy tính trong mạng ngoài.
 
 ## Host-only
-Máy ảo được kết nối với VMnet có tính năng Host-only, trong trường hợp này là VMnet1 . VNnet Host-only kết nối với  một card mạng ảo tương ứng ngoài máy thật (như đã nói ở phần trên). Ở chế độ này,  các máy ảo không có kết nối vào mạng vật lý bên ngoài hay internet thông qua máy thật , có nghĩa là mạng VMnet Host-only và mạng vật lý hoàn toàn tách biệt. IP của máy ảo được cấp bởi DHCP của VMnet tương ứng. Trong nhiều trường hợp đặc biệt cần cấu hình riêng, ta có thể tắt DHCP trên VMnet và cấu hình IP bằng tay cho máy ảo.
+Máy ảo được kết nối với VMnet có tính năng Host-only, trong trường hợp này là VMnet1 . VNnet Host-only kết nối với  một card mạng ảo tương ứng ngoài máy thật. Ở chế độ này, các máy ảo không có kết nối vào mạng vật lý bên ngoài hay internet thông qua máy thật , có nghĩa là mạng VMnet Host-only và mạng vật lý hoàn toàn tách biệt. IP của máy ảo được cấp bởi DHCP của VMnet tương ứng. Trong nhiều trường hợp đặc biệt cần cấu hình riêng, ta có thể tắt DHCP trên VMnet và cấu hình IP bằng tay cho máy ảo.
 
 ![Host-only](../Images/host-only.png)
  
